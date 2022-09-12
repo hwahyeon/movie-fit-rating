@@ -6,13 +6,13 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route path="/reactjs_movieapp/hello">
+                <Route path="/hello" basename={process.env.PUBLIC_URL}>
                     <h1>Hello</h1>
                 </Route>
-                <Route path="/reactjs_movieapp/movie/:id">
+                <Route path="/movie/:id" basename={process.env.PUBLIC_URL}>
                     <Detail />
                 </Route>
-                <Route path="/reactjs_movieapp/">
+                <Route path="/" basename={process.env.PUBLIC_URL}>
                     <Home />
                 </Route>
             </Switch>
