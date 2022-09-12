@@ -9,10 +9,10 @@ function App() {
                 <Route path="/hello">
                     <h1>Hello</h1>
                 </Route>
-                <Route path="/movie/:id">
+                <Route path="/reactjs_movieapp/movie/:id">
                     <Detail />
                 </Route>
-                <Route path="/">
+                <Route path="/reactjs_movieapp/">
                     <Home />
                 </Route>
             </Switch>
