@@ -46,7 +46,7 @@ function Detail() {
             </section>
             <footer className={styles.footer}>
                 <div className={styles.center}>
-                    <Link to={`/movie`}>
+                    <Link to={`${process.env.PUBLIC_URL}/`}>
                         {" "}
                         <button className={styles.btn}>Home</button>
                     </Link>
