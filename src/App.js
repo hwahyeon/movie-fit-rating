@@ -6,7 +6,7 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route path="/hello">
+                <Route path="/reactjs_movieapp/hello">
                     <h1>Hello</h1>
                 </Route>
                 <Route path="/reactjs_movieapp/movie/:id">
