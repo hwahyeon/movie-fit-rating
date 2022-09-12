@@ -1,1 +1,0 @@
-# reactjs_movieapp
