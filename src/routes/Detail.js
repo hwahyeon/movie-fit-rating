@@ -13,7 +13,7 @@ function Detail() {
             )
         ).json();
         setMovie(json.data.movie);
-        console.log(json);
+        // console.log(json);
     };
     useEffect(() => {
         getMovie();
