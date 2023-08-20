@@ -16,7 +16,12 @@ function Movie({ id, coverImg, title, year, summary, genres }) {
                 {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
             </p>
             <ul className={styles.movie__genres}>
-                <li>{genres.map((g) => <li key={g}>{g}</li>) && genres}</li>
+                {genres.map((g, index) => (
+                    <span key={g}>
+                        {g}
+                        {index !== genres.length - 1 && '|'}
+                    </span>
+                ))}
             </ul>
         </div>
     );
