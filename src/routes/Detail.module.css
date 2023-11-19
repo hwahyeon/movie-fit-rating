@@ -13,11 +13,13 @@ body {
 }
 
 .wrap {
+    min-height: 100vh; /* 화면의 전체 높이에 맞춤 */
     width: 1200px;
     margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
+    overflow-y: auto; /* 내용이 넘칠 경우 스크롤 표시 */
 }
 
 /* 헤더 */
@@ -70,15 +72,6 @@ body {
     padding: 20px;
     margin-bottom: 20px;
 }
-
-/* 푸터 */
-/* .footer {
-    grid-column: 1 / -1;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 20px 0;
-} */
 
 /* 반응형 디자인 */
 @media (max-width: 1240px) {
