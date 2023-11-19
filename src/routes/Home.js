@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
 import Movie from "../components/Movie";
 import styles from "./Home.module.css";
 
 function Home() {
-    const [ratingMovies, setRatingMovies] = useState(8);
+    const location = useLocation();
+    const rating = location.state?.rating;
+    const [ratingMovies, setRatingMovies] = useState(rating || 8);
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
 
