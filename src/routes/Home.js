@@ -24,13 +24,14 @@ function Home() {
         <div>
             <div className={styles.movie}>
                 <h3>Movies that fits your rating</h3>
+                <div>{ratingMovies}</div>
                 <input
-                    type="number"
+                    type="range"
                     placeholder="Rating 0~10"
                     value={ratingMovies.value}
                     min="1"
                     max="10"
-                    step="0.1"
+                    step="0.5"
                     onChange={(event) => setRatingMovies(event.target.value)}
                 ></input>
             </div>
