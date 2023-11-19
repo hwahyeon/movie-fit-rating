@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styles from "./Detail.module.css";
 
 function Detail() {
+
+    const history = useHistory();
+
+    const goToHome = () => {
+        history.push('/reactjs-movieapp', { rating: movie.rating });
+    };
+
     const [movie, setMovie] = useState([]);
     const { id } = useParams();
     const getMovie = async () => {
@@ -13,11 +20,11 @@ function Detail() {
             )
         ).json();
         setMovie(json.data.movie);
-        // console.log(json);
     };
     useEffect(() => {
         getMovie();
     }, []);
+
     return (
         <div className={styles.wrap}>
             <header className={styles.header}>
@@ -29,10 +36,13 @@ function Detail() {
                 </div>
             </aside>
             <section className={styles.article1}>
-                <div>Year : {movie.year}</div>
+                <div>{movie.description_full}</div>
             </section>
             <section className={styles.article2}>
-                <div>{movie.description_full}</div>
+                <div>Year : {movie.year}</div>
+                <div>language : {movie.language}</div>
+                <div>runtime : {movie.runtime}</div>
+                <div>imdb code : {movie.imdb_code}</div>
             </section>
             <section className={styles.article3}>
                 <div>
@@ -46,10 +56,7 @@ function Detail() {
             </section>
             <footer className={styles.footer}>
                 <div className={styles.center}>
-                    <Link to={`${process.env.PUBLIC_URL}/`}>
-                        {" "}
-                        <button className={styles.btn}>Home</button>
-                    </Link>
+                    <button className={styles.btn} onClick={goToHome}>Home</button>
                 </div>
             </footer>
         </div>
