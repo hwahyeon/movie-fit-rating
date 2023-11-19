@@ -3,9 +3,10 @@ import Movie from "../components/Movie";
 import styles from "./Home.module.css";
 
 function Home() {
-    const [ratingMovies, setRatingMovies] = useState(8.5);
+    const [ratingMovies, setRatingMovies] = useState(8);
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);
+
     // awync-await
     const getMovies = async () => {
         const json = await (
@@ -45,6 +46,7 @@ function Home() {
                                 key={movie.id}
                                 id={movie.id}
                                 coverImg={movie.medium_cover_image}
+                                year={movie.year}
                                 title={movie.title}
                                 summary={movie.summary}
                                 genres={movie.genres}
