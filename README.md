@@ -1,4 +1,4 @@
-# Movie App
+# Movies Fits Rating
 
 **[Start](https://hwahyeon.github.io/reactjs-movieapp/)**
 
