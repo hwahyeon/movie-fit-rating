@@ -1,4 +1,4 @@
-# Movies Fits Rating
+# Movies that Fit Your Rating
 
 **[Start](https://hwahyeon.github.io/reactjs-movieapp/)**
 
