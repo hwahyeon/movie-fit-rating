@@ -1,6 +1,6 @@
 # Movie App
 
-[Start](https://hwahyeon.github.io/reactjs-movieapp/)
+**[Start](https://hwahyeon.github.io/reactjs-movieapp/)**
 
 ## Overview
 **Movie App** is a web application that allows users to view information about various movies. The app allows users to easily browse movie titles, descriptions, and other related information through ratings.
