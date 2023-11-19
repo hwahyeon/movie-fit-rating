@@ -27,6 +27,25 @@ body {
     color: rgb(0, 0, 0);
     padding: 20px 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* 버튼 */
+.btn {
+    margin: 0 20px;
+    background-color: #333a3f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #5d6266;
 }
 
 .header h1 {
@@ -53,29 +72,13 @@ body {
 }
 
 /* 푸터 */
-.footer {
+/* .footer {
     grid-column: 1 / -1;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px 0;
-}
-
-/* 버튼 */
-.btn {
-    background-color: #333a3f;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 15px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #5d6266;
-}
+} */
 
 /* 반응형 디자인 */
 @media (max-width: 1240px) {

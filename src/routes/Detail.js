@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
 import styles from "./Detail.module.css";
 
 function Detail() {
-
     const history = useHistory();
-
     const goToHome = () => {
         history.push('/reactjs-movieapp', { rating: movie.rating });
     };
@@ -28,6 +25,7 @@ function Detail() {
     return (
         <div className={styles.wrap}>
             <header className={styles.header}>
+                <button className={styles.btn} onClick={goToHome}>Home</button>
                 <h1>{movie.title}</h1>
             </header>
             <aside className={styles.aside}>
@@ -54,11 +52,11 @@ function Detail() {
                     ></iframe>
                 </div>
             </section>
-            <footer className={styles.footer}>
+            {/* <footer className={styles.footer}>
                 <div className={styles.center}>
                     <button className={styles.btn} onClick={goToHome}>Home</button>
                 </div>
-            </footer>
+            </footer> */}
         </div>
     );
 }
