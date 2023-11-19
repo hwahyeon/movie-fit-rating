@@ -34,7 +34,9 @@ function Detail() {
                 </div>
             </aside>
             <section className={styles.article1}>
-                <div>{movie.description_full}</div>
+                <div>
+                    {movie.description_full ? movie.description_full : 'No description'}
+                </div>
             </section>
             <section className={styles.article2}>
                 <div>Year : {movie.year}</div>
